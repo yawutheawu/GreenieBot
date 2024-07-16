@@ -10,6 +10,8 @@ import google.auth
 #Sheets API Quickstart: https://developers.google.com/drive/api/quickstart/python#step_1_turn_on_the
 #Get Whole Sheet: https://stackoverflow.com/questions/51851389/google-sheet-python-api-how-get-values-in-first-sheet-if-dont-know-range
 #On Edit: https://developers.google.com/drive/api/guides/manage-changes#python, https://developers.google.com/drive/api/guides/push
+#Get Color of cell: https://stackoverflow.com/questions/41981911/how-to-read-the-color-of-a-cell-in-google-sheets
+
 
 SheetsAPIFile = Path(r"Sensitive/Hidden/SheetsAPI.json")
 TokenPath = Path(r"Sensitive/Hidden/token.json")

@@ -22,4 +22,9 @@ SheetID = SheetLink.split("/")[7]
 TrapSheetRange = "'Trap Sheet'!A:I"
 GreenieBoardData = SheetGetter.getSheetContents(SheetID, 'Greenie Board')
 TrapSheetData = SheetGetter.getRange(SheetID,TrapSheetRange)
-print(GreenieBoardData)
+#GreenieBoard dict struct: Greenie = 
+#Trap Sheet dict struct: TrapSheet = {"Username in Sheet" : {Date _ Attempt : {Type : "", Date : "", Grade : "", Score : "", Wire : "", Comments : "", Grader : ""}}}
+TrapSheet = {}
+def populateTrapsheet(Data):
+    print(Data)
+populateTrapsheet(TrapSheetData)
