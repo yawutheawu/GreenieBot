@@ -19,3 +19,5 @@ BotAPI = os.getenv("DiscordAPIKey")
 SheetLink = os.getenv("SheetLink")
 SheetID = SheetLink.split("/")[7]
 TrapSheetRange = "'Trap Sheet'!A:I"
+TrapSheetData = SheetGetter.getRange(SheetID,TrapSheetRange)
+print(TrapSheetData)
