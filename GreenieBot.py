@@ -8,6 +8,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+import google.auth
 
 import SheetGetter
 
@@ -19,5 +20,6 @@ BotAPI = os.getenv("DiscordAPIKey")
 SheetLink = os.getenv("SheetLink")
 SheetID = SheetLink.split("/")[7]
 TrapSheetRange = "'Trap Sheet'!A:I"
+GreenieBoardData = SheetGetter.getSheetContents(SheetID, 'Greenie Board')
 TrapSheetData = SheetGetter.getRange(SheetID,TrapSheetRange)
-print(TrapSheetData)
+print(GreenieBoardData)
