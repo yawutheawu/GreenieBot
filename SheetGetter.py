@@ -29,7 +29,6 @@ else:
     with open(TokenPath, "w") as token:
         token.write(creds.to_json())
 
-''' For some reason I wrote this code because it didnt work the way I thought it did, but after I wrote it it started working the way I thought it did? Realest python moment tbhmh
 def directToLetter(Num):
     match Num:
         case 1:
@@ -92,7 +91,6 @@ def convertToLetter(Num):
         return directToLetter(Num)
     else:
         return directToLetter(26) + directToLetter(Num-26)
-'''
 
 def getRange(SheetID,RequiredRange):
     try:
@@ -131,7 +129,6 @@ def getSheetContents(SheetID,SheetName):
                 .get(spreadsheetId=SheetID, range=str(str(sheetName)+"!"+"A:"+str(lastColumn)))
                 .execute()
                 )
-            print(str(str(sheetName)+"!"+"A:"+str(lastColumn)))
             values = result.get("values", [])
             if not values:
                 print("No data found.")
