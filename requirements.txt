@@ -1,0 +1,5 @@
+discord.py==2.4.0
+google_api_python_client==2.137.0
+google_auth_oauthlib==1.2.1
+protobuf==5.27.2
+python-dotenv==1.0.1
