@@ -87,12 +87,25 @@ def directToLetter(Num):
             return 'Z'
         case _:
             return ""
-        
-def convertToLetter(Num):
-    if Num <= 26:
-        return directToLetter(Num)
-    else:
-        return directToLetter(26) + directToLetter(Num-26)
+
+     
+def convertToLetter(n):
+    numCol = [0,0]
+    divided = n
+    result = ""
+    while divided >= 1:
+        numCol[-1] += 1
+        for i in range(len(numCol)-1,0,-1):
+            if numCol[i]>26:
+                numCol[i] = numCol[i] - 26
+                numCol[i-1] +=1
+        if numCol[0] > 26:
+            numCol[0] = numCol[0]-26
+            numCol.insert(0,1)
+        divided-=1
+    for i in numCol:
+        result += directToLetter(i)
+    return result
 
 def getRange(SheetID,RequiredRange):
     try:

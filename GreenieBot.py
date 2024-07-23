@@ -18,6 +18,8 @@ TokenPath = Path(r"Sensitive/Hidden/token.json")
 load_dotenv(environmentFile)
 BotAPI = os.getenv("DiscordAPIKey")
 SheetLink = os.getenv("SheetLink")
+if SheetLink is None and BotAPI is None:
+    raise Exception(".env file with secrets not found")
 SheetID = SheetLink.split("/")[7]
 TrapSheetRange = "'Trap Sheet'!A:I"
 GreenieBoardData = SheetGetter.getSheetContents(SheetID, 'Greenie Board')
